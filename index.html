@@ -8,6 +8,7 @@
 	</head>
 	<body>
 		<h1>Hangman Game</h1>
+		<div id="word"></div>
 		<div id="alphabetButtons">
 			<button class="">A</button>
 			<button class="">B</button>
@@ -36,6 +37,16 @@
 			<button class="">Y</button>
 			<button class="">Z</button>
 		</div>
+		<button id="startBtn">Start!</button>
+		<div class="modal">
+			<div class="modal-content">
+				<span class="close-btn">&times;</span>
+				<input type="text" id="randomWords" />
+				<button class="enter">Enter</button>
+				<p>It Works!</p>
+			</div>
+		</div>
+
 		<script src="hangman.js"></script>
 	</body>
 </html>
