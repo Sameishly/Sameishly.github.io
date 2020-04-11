@@ -1,11 +1,20 @@
+// Modal box pops up
 const modalBtn = document.getElementById('startBtn');
-const modal = document.querySelector('.modal');
-const closeBtn = document.querySelector('.close-btn');
-const enterBtn = document.querySelector('.enter');
-const content = document.querySelector('.modal-content');
 
-// Create an empty array
-const getWords = document.getElementById('words');
+modalBtn.addEventListener('click', function () {
+	modal.style.display = 'block';
+});
+
+const modal = document.querySelector('.modal');
+
+const closeBtn = document.querySelector('.close-btn');
+closeBtn.addEventListener('click', function () {
+	modal.style.display = 'none';
+});
+
+const enterBtn = document.querySelector('.enter');
+enterBtn.addEventListener('click', userInput, false);
+
 function userInput() {
 	const userInput = document.getElementById('randomWords').value;
 
@@ -14,26 +23,15 @@ function userInput() {
 	if (randomWords.length < 3) {
 		result.textContent = 'Word must have at least 3 characters';
 	} else {
-		result.textContent = randomWords;
+		result.innerHTML = randomWords;
 	}
 }
 
-let addWord = false;
 const hangmanUrl = 'http____';
 
-function submit() {
-	const enterBtn = document.querySelector('.enter');
-}
-
-enterBtn.addEventListener('click', userInput, false);
-
-modalBtn.addEventListener('click', function () {
-	modal.style.display = 'block';
-});
-
-closeBtn.addEventListener('click', function () {
-	modal.style.display = 'none';
-});
+// function submit() {
+// 	const enterBtn = document.querySelector('.enter');
+// }
 
 // create an array of blank spaces. Fill the spaces with the clicked letter if present.
 
