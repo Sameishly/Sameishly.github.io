@@ -112,8 +112,8 @@ span {
 }
 #word {
     background-color: red;
-    margin: 3px; 
-    visibility: hidden;
+    margin: 6px; 
+    visibility: visible;
 }
 #slots {
     background-color: blue:
