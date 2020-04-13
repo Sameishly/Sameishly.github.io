@@ -16,23 +16,33 @@ enterBtn.addEventListener('click', userInput, false);
 
 function userInput() {
 	const input = document.getElementById('randomWords').value; // get the value of user input.
-	const splitWord = input.split(''); // split user input string into characters. Stored in separate variable.
-	// console.log(splitWord);
+	const character = input.split(''); // split user input string into characters.
+	// console.log(character);
+	const divResult = document.getElementById('word'); // to append the span elements to this div
+	// divResult.innerHTML = character;
 
-	const divResult = document.getElementById('word'); // storing result inside the div.
-	divResult.innerHTML = splitWord;
+	const getSlotDiv = document.getElementById('slots'); // to append
 
-	const wordSlot = [];
-
-	for (let i = 0; i < input.length; i++) {
-		const createDiv = document.createElement('DIV');
-		const getDiv = document.getElementById('word');
-		const addSlots = document.createTextNode(wordSlot);
-		getDiv.appendChild(addSlots);
-		wordSlot[i] = '_';
-		console.log(wordSlot[i]);
+	for (let i = 0; i < character.length; i++) {
+		let span = document.createElement('span');
+		span.innerText = character[i];
+		divResult.appendChild(span);
 	}
 
+	const wordSlot = [];
+	for (let i = 0; i < character.length; i++) {
+		let span = document.createElement('span');
+		wordSlot[i] = '_';
+		span.innerText = wordSlot[i];
+		getSlotDiv.appendChild(span);
+	}
 	// const unguessedLetters = input.length;
 	// console.log(unguessedLetters);
 }
+
+if (player 2 guesses the right letter) {
+    r
+}
+
+
+// when clicking a button inside the class alphabets

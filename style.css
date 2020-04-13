@@ -1,7 +1,40 @@
+.closeInstructionModal {
+	float: right;
+	color: lightgray;
+	font-size: 24px;
+	font-weight: bold;
+}
+.closeInstructionModal:hover {
+	color: darkgray;
+}
+
+.content {
+	display: none;
+	position: fixed;
+	padding-top: 50px;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgb(0, 0, 0);
+	background-color: rgba(0, 0, 0, 0.5);
+}
+.modal-content {
+	position: relative;
+	background-color: white;
+	padding: 20px;
+	margin: auto;
+	width: 75%;
+	-webkit-animation-name: animatetop;
+	-webkit-animation-duration: 0.4s;
+	animation-name: animatetop;
+	animation-duration: 0.4s;
+	text-align: center;
+}
 .enter {
 	background-color: aqua;
 }
-.instructions {
+#instructions {
 	background-color: green;
 	padding: 10px;
 	border-radius: 5px;
@@ -73,4 +106,15 @@ h1 {
 }
 .close-btn:hover {
 	color: darkgray;
+}
+span {
+	margin: 3px;
+}
+#word {
+    background-color: red;
+    margin: 3px; 
+    visibility: hidden;
+}
+#slots {
+    background-color: blue:
 }
