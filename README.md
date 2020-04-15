@@ -9,6 +9,7 @@ A two player game application that allows player 1 to enter a random word that w
 ## Features
 
 Players can input any random word.
+
 Players key input is evaluated.
 
 ## Installation Instructions
