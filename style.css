@@ -71,7 +71,7 @@ div button {
 h1 {
 	background-color: #586f7c;
 	text-align: center;
-	margin: auto 50px;
+	margin: 10px 50px 0px 50px;
 	padding: 10px;
 	border-radius: 10px;
 	font-family: 'Manrope', sans-serif;
@@ -118,4 +118,8 @@ span {
 }
 #startBtn {
 	background-color: #586f7c;
+}
+
+.letter-reveal {
+	visibility: visible;
 }
