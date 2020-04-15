@@ -26,6 +26,7 @@ function userInput() {
 	for (let i = 0; i < character.length; i++) {
 		// span contains each letter that player 2 will try to guess. Is appended to div class id
 		const span = document.createElement('span');
+		span.setAttribute('class', 'letter');
 		span.innerText = character[i];
 		divResult.appendChild(span);
 	}
@@ -50,7 +51,10 @@ alphabetButtons.addEventListener('click', (event) => {
 	let keyInput = event.target.innerHTML; //Targeting the HTML inside each alphabet button.
 	for (let i = 0; i < userGuess.length; i++) {
 		if (keyInput.toLowerCase() === userGuess[i]) {
-			console.log('we have a match!');
+			// document.querySelectorAll('letter').style.visiblity = 'visible';
+
+			alert('we have a match!');
+
 			//replace the slot with the correct keyInput(letter chosen).
 			// alert(keyInput);
 		}
