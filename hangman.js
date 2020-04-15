@@ -1,4 +1,3 @@
-// Modal box pops up
 const modalBtn = document.getElementById('startBtn');
 modalBtn.addEventListener('click', function () {
 	modal.style.display = 'block';
@@ -41,9 +40,8 @@ function userInput() {
 		getSlotDiv.appendChild(span);
 	}
 }
-// Grab all of class guesses. Then, add when there is a correct input, replace the underscore with the letter.
+
 const getGuess = document.querySelectorAll('.guess');
-console.log(getGuess);
 
 const alphabetButtons = document.querySelector('#alphabetButtons');
 
@@ -51,20 +49,14 @@ const alphabetButtons = document.querySelector('#alphabetButtons');
 alphabetButtons.addEventListener('click', (event) => {
 	const letters = document.querySelectorAll('.letter');
 	let keyInput = event.target.innerHTML; //Targeting the HTML inside each alphabet button.
+
 	for (let i = 0; i < userGuess.length; i++) {
-		console.log(letters);
 		if (keyInput.toLowerCase() === userGuess[i]) {
 			for (let i = 0; i < letters.length; i++) {
-				// compare userGuess i to letters i . toggle class set to visible
 				if (keyInput.toLowerCase() === letters[i].dataset.letter) {
 					letters[i].classList.add('letter-reveal');
 				}
 			}
-			// document.querySelectorAll('letter').style.visiblity = 'visible';
-			// alert('we have a match!');
-			//replace the slot with the correct keyInput(letter chosen).
-			// alert(keyInput);
-			console.log(keyInput, userGuess);
 		}
 	}
 });
